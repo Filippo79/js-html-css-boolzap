@@ -10,23 +10,6 @@
     clear: both;
 }
 
-.container {
-    width: 100vw;
-    height: 100vh;
-    background-image: linear-gradient(to bottom, #009688 0px, #009688 15vh, #DDDBD1 15vh, #D2DBDC 100% );
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container-base {
-    width: calc(100vw - 20%);
-    height: calc(100vh - 20%);
-    background-color: lightyellow;
-
-
-}
-
 aside {
     display: flex;
     flex-direction: column;
@@ -60,4 +43,66 @@ footer {
     float: left;
     height: 80px;
     width: calc(100% - 350px);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #009688 0px, #009688 15vh, #DDDBD1 15vh, #D2DBDC 100% );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-base {
+    width: calc(100vw - 20%);
+    height: calc(100vh - 20%);
+    background-color: lightyellow;
+}
+
+.contact-fix {
+    height: 80px;
+    width: 100%;
+    border: 1px solid darkgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foto-profilo-fix img {
+    width: 50px;
+    margin: 10px;
+}
+
+.contact-fix .icons {
+    font-size: 20px;
+    margin-right: 20px;
+    color: lightgray;
+}
+
+.contact {
+    height: 80px;
+    width: 100%;
+    border: 1px solid darkgray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.foto-profilo {
+    width: 100px;
+    height: 100%;
+}
+
+.foto-profilo img {
+    width: 60px;
+}
+
+.name p {
+    color: lightgrey;
+}
+
+.orario a {
+    color: lightgrey;
+    text-decoration: none;
 }
