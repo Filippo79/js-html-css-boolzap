@@ -74,9 +74,9 @@ footer {
     margin: 10px;
 }
 
-.my-profile .icons {
+.icons i {
     font-size: 20px;
-    margin-right: 20px;
+    margin-right: 10px;
     color: lightgray;
 }
 
