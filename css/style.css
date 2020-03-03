@@ -14,25 +14,23 @@ aside {
     display: flex;
     flex-direction: column;
     background-color: lightsalmon;
-    width: 350px;
+    width: 380px;
     height: 100%;
     float: left;
 }
 
 
- header {
+header {
     background-color: lightpink;
-    opacity: 0.9;
-    width: calc(100% - 350px);
+    width: calc(100% - 380px);
     height: 80px;
     float: left;
-    display: flex;
 }
 
 main {
     background-color: beige;
     padding: 50px 0 0 50px;
-    width: calc(100% - 350px);
+    width: calc(100% - 380px);
     height: calc(100% - 80px - 80px);
     float: left;
     overflow-y: auto;
@@ -42,7 +40,7 @@ footer {
     background-color: cornflowerblue;
     float: left;
     height: 80px;
-    width: calc(100% - 350px);
+    width: calc(100% - 380px);
 }
 
 .container {
@@ -70,14 +68,16 @@ footer {
 }
 
 .foto-my-profile img {
-    width: 50px;
+    width: 70px;
     margin: 10px;
+    cursor: pointer;
 }
 
 .icons i {
     font-size: 20px;
     margin-right: 10px;
     color: lightgray;
+    cursor: pointer;
 }
 
 .notifications {
@@ -102,15 +102,17 @@ footer {
 .bell-notifications i {
     color: aqua;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .notifications-desktop p {
     text-decoration: underline;
     color: lightgray;
+    cursor: pointer;
 }
 
 .div-search {
-    height: 40px;
+    height: 55px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -119,15 +121,16 @@ footer {
 }
 
 input[type=text] {
-    height: 32px;
+    height: 30px;
     width: 270px;
     border-radius: 5px;
     font-size: 16px;
     text-align: center;
+    cursor: pointer;
 }
 
 .contacts {
-    height: calc(100vh - 200px);
+    height: calc(100vh - 215px);
     overflow-y: auto;
 }
 
@@ -148,13 +151,22 @@ input[type=text] {
 
 .foto-profilo img {
     width: 60px;
+    cursor: pointer;
 }
 
 .name p {
     color: lightgrey;
+    cursor: pointer;
 }
 
 .orario a {
     color: lightgrey;
     text-decoration: none;
+}
+
+.last-access {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
