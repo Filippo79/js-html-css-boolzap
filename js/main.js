@@ -8,10 +8,17 @@ $(document).ready(function() {
 
         //Inseriamo nell'html il messaggio
         $('.messages-sent').append(messaggio);
+    });
 
-
-
-
+    $('#search-contact').keiup(function(event){
+        var variabileFiltroCarattere = $(this).val().toLowerCase();
+        $('#contact h4').each(function(){
+            if ($(this).text().toLoveCase().includes(variabileFiltroCarattere)){
+                $(this).shov();
+            }else {
+                $(this).hide();
+            }
+        });
     });
 
 
