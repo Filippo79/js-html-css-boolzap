@@ -19,7 +19,6 @@ aside {
     float: left;
 }
 
-
 header {
 
     background-color: #ededed;
@@ -33,12 +32,13 @@ header {
 main {
     background-color: beige;
     background-image: url(https://i.pinimg.com/originals/e8/d9/4e/e8d94e1e8b6b530ad315e9385290141b.jpg);
-    
-    padding: 50px 0 0 50px;
+    padding: 50px;
     width: calc(100% - 380px);
     height: calc(100% - 80px - 80px);
     float: left;
     overflow-y: auto;
+    display: flex;
+    justify-content: space-around;
 }
 
 footer {
@@ -210,4 +210,43 @@ input[type=text] {
     font-size: 25px;
     color: #919191;
     cursor: pointer;
+}
+
+.messages-sent {
+    float: left;
+    color: #303030;
+    font-size: 16px;
+    width: calc(40% - 10px);
+    height: 100%;
+}
+
+.message-sent-1 {
+    background-color: #dcf8c6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.messages-received  {
+    float: right;
+    color: #303030;
+    font-size: 16px;
+    width: calc(40% - 10px);
+    height: 100%;
+}
+.message-received-1 {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.template {
+    display: none;
 }
