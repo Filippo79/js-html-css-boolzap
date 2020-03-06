@@ -129,6 +129,16 @@ footer {
     background-color: #f7f7f7;
 }
 
+ .search form::before {
+    font-family: 'fontawesome';
+    content: '\f002';
+    font-weight: 900;
+    margin-left: 10px;
+    color: #a9a9a9;
+    cursor: pointer;
+
+}
+
 input[type=text] {
     height: 30px;
     width: 270px;

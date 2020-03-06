@@ -6,13 +6,12 @@ $(document).ready(function() {
         messaggio.children('.text-message').text(messaggioInput);
         messaggio.children('.timetable').text('16:40');
 
-        //Inseriamo nell'html il messaggio
         $('.messages-sent').append(messaggio);
     });
 
     $('#search-contact').keiup(function(event){
         var variabileFiltroCarattere = $(this).val().toLowerCase();
-        $('#contact h4').each(function(){
+        $('#contact').each(function(){
             if ($(this).text().toLoveCase().includes(variabileFiltroCarattere)){
                 $(this).shov();
             }else {
@@ -20,8 +19,4 @@ $(document).ready(function() {
             }
         });
     });
-
-
-
-
 });
