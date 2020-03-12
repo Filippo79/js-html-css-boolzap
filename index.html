@@ -2,8 +2,10 @@
 <html lang="en" dir="ltr">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/73e1c109e3.js" crossorigin="anonymous"></script>        <meta charset="utf-8">
+        <script src="https://kit.fontawesome.com/73e1c109e3.js" crossorigin="anonymous"></script>
+        <meta charset="utf-8">
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js" charset="utf-8"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <title>BoolzApp-Web</title>
     </head>
@@ -258,18 +260,22 @@
                 </footer>
             </div>
         </div>
-            <div class="template">
+        <script id="message-template-sent" type="text/x-handlebars-template">
+            <div class="messages-sent">
                 <div class="message-sent-1">
-                    <p class="text-message"></p>
-                    <p class="timetable"></p>
+                    <p class="text-message">{{testoMessaggio}}</p>
+                    <p class="timetable">{{orario}}</p>
                 </div>
             </div>
-            <div class="template">
+        </script>
+        <script id="message-template-received" type="text/x-handlebars-template">
+            <div class="messages-received">
                 <div class="message-received-1">
-                    <p class="text-message"></p>
-                    <p class="timetable"></p>
+                    <p class="text-message">{{testoMessaggio}}</p>
+                    <p class="timetable">{{orario}}</p>
                 </div>
             </div>
+        </script>
         <script src="js/main.js" charset="utf-8"></script>
     </body>
 </html>
