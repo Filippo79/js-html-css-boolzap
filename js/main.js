@@ -39,22 +39,33 @@ function inviaMessaggio(){
         //-----------------------Handlebars------------------------------
         var source = $('#message-template-sent').html();// clono il template messaggio
         var template = Handlebars.compile(source); // do in pasto ad Handlebars il template clonato
-        var datiMessaggio = {
-            testoMessaggio: messaggioInput,
-            orario: '13:00'
+        var datiMessaggio = {                    // Assemblo in un oggetto il contenuto del messaggio
+            testoMessaggio: messaggioInput,      // richiamo la funzione 'inviaMessaggio'
+            orario: '13:00'                       //scrivo l'orario da visualizzarenel messaggio
         };
 
-        var templateMessaggio = template(datiMessaggio);
-        $('.message.active').append(templateMessaggio);
+        var templateMessaggio = template(datiMessaggio);// Popolo il template di handlebars con il contenuto del messaggio
+        $('.message.active').append(templateMessaggio);// faccio l'append del template così popolato
 
+        var source = $('#message-template-received').html();// clono il template messaggio
+        var template = Handlebars.compile(source);// do in pasto ad Handlebars il template clonato
+        var datiMessaggio = {                      // Assemblo in un oggetto il contenuto del messaggio
+            testoMessaggio: 'ok ben fatto',        // scrivo il testo da visualizzarenel messaggio
+            orario: '13:35'                        //scrivo l'orario da visualizzarenel messaggio
+        };
+        var templateMessaggio = template(datiMessaggio);// Popolo il template di handlebars con il contenuto del messaggio
+        $('.message.active').append(templateMessaggio);// faccio l'append del template così popolato
+
+
+//-----------------Non ci sono riuscito a far partire il messaggio dopo 1 secondo.
 //-----------------------Fine Handlebars--------------------------------------
-        setTimeout(function() {
+        /*setTimeout(function() {
             var creaMessaggio = $('.entry-template .message-received-1').clone();
             creaMessaggio.children('.text-message').text('ok');
             creaMessaggio.children('.timetable').text('16:40');
             $('.message.active').append(creaMessaggio);
 
-        }, 1000);
+        }, 1000);*/
     }
 }
 
