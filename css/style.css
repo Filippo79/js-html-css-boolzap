@@ -129,7 +129,7 @@ footer {
     background-color: #f7f7f7;
 }
 
- .search form::before {
+ /* .search form::before { */
     font-family: 'fontawesome';
     content: '\f002';
     font-weight: 900;

@@ -32,11 +32,12 @@ function inviaMessaggio(){
     var messaggioInput = $('.insert-message').val();
     if (messaggioInput.trim().length > 0) {
         $('.insert-message').val('');
+        //-------------------Senza Handlebars-----------------------------
         /*var messaggio = $('.template .message-sent-1').clone();
         messaggio.children('.text-message').text(messaggioInput);
         messaggio.children('.timetable').text('16:40');
         $('.message.active').append(messaggio);*/
-        //-----------------------Handlebars------------------------------
+        //------------------Con Handlebars------------------------------
         var source = $('#message-template-sent').html();// clono il template messaggio
         var template = Handlebars.compile(source); // do in pasto ad Handlebars il template clonato
         var datiMessaggio = {                    // Assemblo in un oggetto il contenuto del messaggio
@@ -58,7 +59,7 @@ function inviaMessaggio(){
 
 
 //-----------------Non ci sono riuscito a far partire il messaggio dopo 1 secondo.
-//-----------------------Fine Handlebars--------------------------------------
+
         /*setTimeout(function() {
             var creaMessaggio = $('.entry-template .message-received-1').clone();
             creaMessaggio.children('.text-message').text('ok');
@@ -68,7 +69,7 @@ function inviaMessaggio(){
         }, 1000);*/
     }
 }
-
+//Funzione ricerca Contatto
 function ricercaContatto(event){
     var ricercaContatto = $(this).val().toLowerCase();
     //console.log(ricercaContatto);
@@ -80,5 +81,72 @@ function ricercaContatto(event){
             $(this).hide();
         }
     });
+}
+//------------------Con Handlebars------------------------------
+var source = $('#single-contact-template').html();// clono il template contatto
+var template = Handlebars.compile(source);// do in pasto ad Handlebars il template clonato
+var datiContatto = [
 
+        {
+            immagine: 'laura-vomitina.png',
+            numero: '0',
+            nome: 'Laura',
+            testoMessaggio: 'ciao',
+            orario: '18:50'
+        },
+
+        {
+            immagine: 'claudio-bianco.png',
+            numero:'1',
+            nome: 'Claudio',
+            testoMessaggio: 'Ma dove seiiiiii?',
+            orario: '18:50'
+        },
+
+
+        {
+            immagine: 'gigione.png',
+            numero: '2',
+            nome: 'Gigione',
+            testoMessaggio: 'Mi chiamano Gigi la trottola',
+            orario: '18:50'
+        },
+
+        {
+            immagine: 'giorgio-spriau.png',
+            numero: '3',
+            nome: 'Giorgio',
+            testoMessaggio: 'Mi hai spaventato',
+            orario: '18:50'
+        },
+
+        {
+            immagine: 'polifemo.png',
+            numero: '4',
+            nome: 'Polifemo',
+            testoMessaggio: 'Mi accompagni al P.soccorso?',
+            orario: '18:50'
+        },
+
+        {
+            immagine: 'mirko-cespuglio.png',
+            numero: '5',
+            nome: 'Mirko',
+            testoMessaggio: 'Ciaooooooooo',
+            orario: '18:50'
+        },
+
+        {
+            immagine: 'sandro.png',
+            numero: '6',
+            nome: 'Don.Sandro',
+            testoMessaggio: 'Quando torni in chiesa?',
+            orario: '17:50'
+        }
+
+];
+for (var i = 0; i < datiContatto.length; i++) {
+    var templateContatto = template(datiContatto[i]);
+    //console.log(datiContatto[2]);
+    $('.contacts').append(templateContatto);
 }

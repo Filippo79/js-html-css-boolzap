@@ -35,13 +35,13 @@
                     <div class="div-search">
                         <div class="search">
                             <form>
-                                <!-- <i class="fas fa-search"></i> -->
+                                <i class="fas fa-search"></i>
                                 <input class="search-contact" type="text" placeholder="Cerca o inizia una nuova chat">
                             </form>
                         </div>
                     </div>
                     <div class="contacts">
-                        <div class="single-contact" data-num-contact='1'>
+                        <!-- <div class="single-contact" data-num-contact='1'>
                             <div class="foto-profilo">
                                 <img src="img/laura-vomitina.png" alt="Foto">
                             </div>
@@ -124,7 +124,7 @@
                             <div class="orario">
                                 <a href="#">13:20</a>
                             </div>
-                        </div>
+                        <!-- </div> -->
                     </div>
                 </aside>
                 <header>
@@ -146,7 +146,7 @@
                     </div>
                 </header>
                 <main>
-                    <div class="message active" data-num-chat='1' >
+                    <div class="message active" data-num-chat='0' >
                         <div class="messages-received">
                             <div class="message-received-1">
                               <p class="text-message">Ma come ca...????</p>
@@ -160,7 +160,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="message" data-num-chat='2' >
+                    <div class="message" data-num-chat='1' >
                         <div class="messages-received">
                             <div class="message-received-1">
                               <p class="text-message">si si </p>
@@ -171,6 +171,20 @@
                             <div class="message-sent-1">
                               <p class="text-message-sent-1">ma quando mai ?</p>
                               <p class="timetable">13:50</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message" data-num-chat='2' >
+                        <div class="messages-received">
+                            <div class="message-received-1">
+                              <p class="text-message">Ma come ca...????</p>
+                              <p class="timetable">3:00</p>
+                            </div>
+                        </div>
+                         <div class="messages-sent">
+                            <div class="message-sent-1">
+                              <p class="text-message-sent-1">Non saprei....</p>
+                              <p class="timetable">12:50</p>
                             </div>
                         </div>
                     </div>
@@ -230,20 +244,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="message" data-num-chat='7' >
-                        <div class="messages-received">
-                            <div class="message-received-1">
-                              <p class="text-message">Ma come ca...????</p>
-                              <p class="timetable">3:00</p>
-                            </div>
-                        </div>
-                         <div class="messages-sent">
-                            <div class="message-sent-1">
-                              <p class="text-message-sent-1">Non saprei....</p>
-                              <p class="timetable">12:50</p>
-                            </div>
-                        </div>
-                    </div>
                 </main>
                 <footer>
                     <div class="enter-text">
@@ -260,6 +260,20 @@
                 </footer>
             </div>
         </div>
+        <script id="single-contact-template" type="text/x-handlebars-template">
+            <div class="single-contact" data-num-contact='{{numero}}'>
+                <div class="foto-profilo">
+                    <img src="img/{{immagine}}" alt="Foto">
+                </div>
+                <div class="name">
+                    <h4>{{nome}}</h4>
+                    <p>{{testoMessaggio}}</p>
+                </div>
+                <div class="orario">
+                    <a href="#">{{orario}}</a>
+                </div>
+            </div>
+        </script>
         <script id="message-template-sent" type="text/x-handlebars-template">
             <div class="messages-sent">
                 <div class="message-sent-1">
